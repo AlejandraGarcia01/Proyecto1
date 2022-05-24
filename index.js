@@ -20,7 +20,7 @@ app.get('/ver', (req, res) => {
       timestampsInSnapshots: true
     });
     var wholeData = []
-	db.collection('Localizacion').orderBy('Fecha', 'asc').get()
+	db.collection('Localziacion').orderBy('Fecha', 'asc').get()
     .then(snapshot => {
       snapshot.forEach(doc => {
       
@@ -39,7 +39,7 @@ app.post('/insertar', (req, res)=>{
 	db.settings({
       timestampsInSnapshots: true
     });
-    db.collection('Localizacion').add({
+    db.collection('Localziacion').add({
       Latitud: req.body.Latitud,
       Longitud: req.body.Longitud,
       Fecha: new Date()
