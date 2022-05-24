@@ -39,16 +39,12 @@ app.post('/insertar', (req, res)=>{
 	db.settings({
       timestampsInSnapshots: true
     });
-    db.collection('Valores').add({
-      icalor: req.body.icalor,
-      iruido: req.body.iruido,
-      igas: req.body.igas,
+    db.collection('Localizacion').add({
+      localizacion: req.body.localizacion,
       fecha: new Date()
     });
     res.send({
-      icalor: req.body.icalor,
-      iruido: req.body.iruido,
-      igas: req.body.igas,
+      localizacion: req.body.localizacion,
       fecha: new Date(),
       status: 'Valores insertados!'
   })
