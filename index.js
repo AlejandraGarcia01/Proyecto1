@@ -40,11 +40,13 @@ app.post('/insertar', (req, res)=>{
       timestampsInSnapshots: true
     });
     db.collection('Localizacion').add({
-      localizacion: req.body.localizacion,
+      Latitud: req.body.Latitud,
+      Longitud: req.body.Longitud,
       Fecha: new Date()
     });
     res.send({
-      localizacion: req.body.localizacion,
+      Latitud: req.body.Latitud,
+      Longitud: req.body.Longitud,
       Fecha: new Date(),
       status: 'Valores insertados!'
   })
